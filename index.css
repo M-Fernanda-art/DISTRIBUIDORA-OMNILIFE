@@ -1,0 +1,41 @@
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: auto;
+    margin: 0 20px 0 20px;
+}
+.nav-inicio {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    height: 100px;
+    width: auto;
+    background-color: #F29C27;
+    padding-left: 20px;
+}
+.nav-inicio a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Nunito", sans-serif;
+    transition: 0.3s;
+}
+.nav-inicio a:hover {
+    color: #360050;
+}
+#carrito {
+    cursor: pointer;  
+}
