@@ -73,6 +73,7 @@ header {
     display: flex;
     flex-direction: column;
     width: 500px;
+    gap: 25px;
 }
 .section1 h1 {
     font-family: "Nunito", sans-serif;
