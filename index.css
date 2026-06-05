@@ -58,3 +58,52 @@ header {
     justify-content: center;
     width: 500px;
 }
+.section1 {
+    display: flex;
+    align-items: center;
+    background-image: url(Imagenes/productos.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    padding: 80px;
+    margin-top: 20px;
+}
+.section1Textos {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+.section1 h1 {
+    font-family: "Nunito", sans-serif;
+    color: #8E24AA;
+    font-size: 25px;
+}
+.section1 p {
+    font-family: "Nunito", sans-serif;
+    color: #212121;
+    font-size: 18px;
+    text-align: justify;
+}
+.contenedorBoton {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.botonSection1 {
+    font-family: "Nunito", sans-serif;
+    color: #FFFFFF;
+    border-color: #F29C27;
+    font-size: 18px;
+    background: #F29C27;
+    border-radius: 5px;
+    font-weight: bold;
+    height: 35px;
+    width: 150px;
+    cursor: pointer;
+}
+.botonSection1:hover {
+    background-color: #360050;
+    color: #FFFFFF;
+    border-color: #360050;
+}
