@@ -1,12 +1,12 @@
 // SECTION 2 - CARDS CAROUSEL
 
-const track = document.querySelector(".contenedorCards");
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
+const track = document.querySelector(".contenedorCards-track");
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
 
 const cards = document.querySelectorAll(".card");
 
-const cardWidth = 325; 
+const cardWidth = 302; 
 
 const cardsVisibles = 4;
 
