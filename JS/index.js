@@ -6,7 +6,7 @@ const prevBtn = document.getElementById("prev");
 
 const cards = document.querySelectorAll(".card");
 
-const cardWidth = 302; 
+const cardWidth = 304; 
 
 const cardsVisibles = 4;
 

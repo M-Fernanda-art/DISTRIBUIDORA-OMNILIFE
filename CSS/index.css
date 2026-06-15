@@ -148,12 +148,16 @@ header {
 .cardTexto {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     font-family: "Nunito", sans-serif;
     flex-grow: 1;
     color: #212121;
     font-size: 18px;
     text-align: center;
     padding: 15px;
+}
+.descripcion {
+    flex-grow: 1;
 }
 .precio {
     font-family: "Nunito", sans-serif;
