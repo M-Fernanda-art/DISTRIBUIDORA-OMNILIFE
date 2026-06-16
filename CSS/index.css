@@ -262,15 +262,27 @@ h1 {
 }
 .contenedorMakeup {
     display: flex;
+    justify-content: center;
     gap: 5px;
     min-height: 300px;
+    padding: 20px 0;
     background-color: #F5F5F5;
 }
+.contenedorMakeup-wrapper {
+    width: 1350px;
+    overflow: hidden;
+}
 
+.contenedorMakeup-track {
+    display: flex;
+    gap: 5px;
+    transition: transform 0.5s ease;
+}
 .makeupCard {
     position: relative;
-    width: 350px;
+    width: 250px;
     height: 250px;
+    flex-shrink: 0;
     overflow: hidden;
     border-radius: 15px;
     cursor: pointer;
@@ -299,7 +311,7 @@ h1 {
     bottom: 20px;
     color: #360050;
     background-color: white;
-    padding: 3px;
+    padding: 10px 15px;
     font-size: 16px;
     text-transform: uppercase;
     font-family: "Nunito", sans-serif;
@@ -311,10 +323,40 @@ h1 {
     transform: translateX(-50%);
     margin: 0;
     z-index: 2;
+    display: inline-block;
+    width: max-content;
+    max-width: 80%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 .makeupCard:hover img {
     transform: scale(1.05);
 }
 .makeupCard:hover .overlay {
     background-color: rgba(0, 0, 0, 0);
+}
+.makeupCard:hover .overlay h2{
+    transform: translateX(-50%) translateY(20px);
+}
+.contenedorDots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.dot.activo {
+    width: 25px;
+    border-radius: 20px;
+    background-color: white;
 }
