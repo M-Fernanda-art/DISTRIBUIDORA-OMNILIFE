@@ -42,11 +42,11 @@ prevBtn.addEventListener("click", () => {
 
 // SECTION 3 - CARDS CAROUSEL
 
-const track = document.querySelector(".contenedorMakeup-track");
+const trackMakeup = document.querySelector(".contenedorMakeup-track");
 const dots = document.querySelectorAll(".dot");
 const card = document.querySelector(".makeupCard");
 
-const cardWidth = card.offsetWidth + 5; 
+const cardWidthMakeup = card.offsetWidth + 5; 
 const cardsPorVista = 5;
 
 dots.forEach((dot, index) => {
@@ -55,6 +55,6 @@ dots.forEach((dot, index) => {
         dots.forEach(d => d.classList.remove("activo"));
         dot.classList.add("activo");
 
-        track.style.transform = `translateX(-${index * cardWidth * cardsPorVista}px)`;
+        trackMakeup.style.transform = `translateX(-${index * cardWidthMakeup * cardsPorVista}px)`;
     });
 });
