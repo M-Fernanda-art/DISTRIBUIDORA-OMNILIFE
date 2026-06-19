@@ -328,7 +328,6 @@ h1 {
 
     transition: all 0.5s ease;
 }
-
 .makeupCard:hover img {
     transform: scale(1.05);
 }
@@ -361,4 +360,67 @@ h1 {
     width: 25px;
     border-radius: 20px;
     background-color: black;
+}
+
+
+/* SECTION 4 */
+
+.contenedorAfiliacion {
+    display: flex;
+    height: auto;
+}
+.contenedorAfiliacion img {
+    display: flex;
+    align-items: center;
+    width: 870px;
+    height: 585px;
+}
+.formAfiliacion {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: #FFFFFF;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    width: 350px;
+}
+.formAfiliacion input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #E0E0E0;
+    border-radius: 10px;
+    font-family: "Nunito", sans-serif;
+    transition: .3s;
+}
+.formAfiliacion input:focus {
+    outline: none;
+    border-color: #8E24AA;
+}
+.filaForm {
+    display: flex;
+    gap: 15px;
+}
+.filaForm input {
+    flex: 1;
+    height: 45px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.btnAfiliar {
+    width: 100%;
+    height: 50px;
+    background: #8E24AA;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+.btnAfiliar:hover {
+    background: #F29C27;
 }
