@@ -424,3 +424,63 @@ h1 {
 .btnAfiliar:hover {
     background: #F29C27;
 }
+
+
+/* SECTION 5 */
+
+.contenedorCapacitacion {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+#formCapacitacion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background: #00BCD4;
+    border-radius: 20px;
+    width: 350px;
+    flex-shrink: 0;
+    padding: 20px;
+}
+#formCapacitacion input {
+    width: 300px;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #E0E0E0;
+    border-radius: 10px;
+    font-family: "Nunito", sans-serif;
+    transition: .3s;
+}
+.btnCapacitacion {
+    width: 200px;
+    height: 50px;
+    background: #E0E0E0;
+    color: black;
+    font-family: "Nunito", sans-serif;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+.btnCapacitacion:hover {
+    background: #8E24AA;
+}
+.contenedorVideo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+#video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}

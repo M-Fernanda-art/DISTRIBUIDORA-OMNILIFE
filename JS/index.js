@@ -58,3 +58,22 @@ dots.forEach((dot, index) => {
         trackMakeup.style.transform = `translateX(-${index * cardWidthMakeup * cardsPorVista}px)`;
     });
 });
+
+
+// SECTION 5 - VIDEO
+
+const video = document.getElementById("video");
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+}, {
+    threshold: 0.5
+});
+observer.observe(video);
