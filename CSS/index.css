@@ -432,6 +432,7 @@ h1 {
     display: flex;
     gap: 20px;
     width: 100%;
+    margin-bottom: 30px;
 }
 #formCapacitacion {
     display: flex;
@@ -470,6 +471,7 @@ h1 {
 }
 .btnCapacitacion:hover {
     background: #8E24AA;
+    color: white;
 }
 .contenedorVideo {
     flex: 1;
@@ -483,4 +485,109 @@ h1 {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+}
+
+
+/* FOOTER */
+
+.contenedorFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    min-height: 50px;
+    background-color: #360050;
+    padding: 20px 50px;
+}
+.contenedorLogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.contenedorLogo img {
+    width: 150px;
+    height: 150px;
+}
+.contenedorLogo p {
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+}
+.contenedorInfo {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorInfo h3 {
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #00BCD4;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.contenedorInfo a {
+    font-size: 14px;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.contenedorMenu {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorMenu h3 {
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #00BCD4;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.contenedorMenu a {
+    font-size: 14px;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* WHATSAPP */
+
+.btnWpp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.btnWpp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btnWpp:hover {
+    transform: scale(1.1);
 }
