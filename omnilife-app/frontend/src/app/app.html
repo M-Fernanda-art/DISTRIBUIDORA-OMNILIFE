@@ -1,0 +1,604 @@
+
+    <!-- HEADER -->
+    
+    <header>
+        <div  class="logo-container">
+            <a href="X">
+                <img src="Imagenes/logo.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <nav class="nav-inicio">
+            <a href="X">
+                Productos
+            </a>
+            <a href="X">
+                Seytú Maquillaje
+            </a>
+            <a href="X">
+                Afiliarme
+            </a>
+            <a href="X">
+                Agendar capacitación
+            </a>
+            <a href="X">
+                <i class="fa-solid fa-cart-shopping" style="color: rgb(54, 0, 80);"></i>
+            </a>
+        </nav>
+    </header>
+
+
+    <!-- SECTION 1 -->
+
+    <section>
+        <div class="formBuscar">
+            <form action="X" 
+                method="post" class="buscar">
+                <label for="Buscar"></label>
+                <input type="text" placeholder="Buscar">
+            </form>
+        </div>
+        <div class="section1">
+            <div class="section1Textos">
+                <h1>
+                    Descubre una línea de productos para apoyar tu bienestar integral
+                </h1>
+                <p>
+                    En nuestra distribuidora encontrarás el catálogo de suplementos nutricionales, bebidas funcionales y opciones especializadas que ayudan a fortalecer el sistema inmunológico, aumentar la energía, apoyar la salud digestiva, favorecer el rendimiento físico y complementar una alimentación equilibrada. Productos como Omniplus, UZO Evolución, One C Mix, Pump Supreme y muchas otras fórmulas han sido desarrollados para acompañar distintos objetivos de bienestar y estilo de vida. Explora la variedad disponible y encuentra la alternativa ideal para ti y tu familia.
+                </p>
+                <div class="contenedorBoton">
+                    <a href="x"> 
+                        <button class="botonSection1">
+                            Productos
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 2 -->
+    
+    <section>
+        <div class="contenedorCards">
+
+            <button id="prev" (click)="anterior()">❮</button>
+
+            <div class="contenedorCards-wrapper">
+
+                <div class="contenedorCards-track" #trackCards>
+
+                    <div class="card" #card>
+                        <div class="cardImg">
+                            <a href="X">
+                                <img src="Imagenes/omniplus.png" alt="Omniplus">
+                            </a>
+                        </div>
+                        <div class="cardTexto">
+                        <p class="descripcion">
+                            Contiene vitamina A, vitamina B1,RiboflavinaB2,Niacina B3, Acido pantoteico B5,PriridoxinaB6, Biotina, B12, Vitamina D, E y Minerales:Calcio, zinc, Cobre, Magnesio y Selenio.
+                        </p>
+                        <p class="precio">
+                            $184.550
+                        </p>
+                        <div class="contenedorBoton">
+                            <a href="x"> 
+                            <button class="botonSection2">
+                                Agregar al carrito
+                            </button>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="card" #card>
+                        <div class="cardImg">
+                            <a href="X">
+                                <img src="Imagenes/ego.png" alt="Ego10">
+                            </a>
+                        </div>
+                        <div class="cardTexto">
+                            <p class="descripcion">
+                                Bebida energizante, contiene cafeína proveniente del extracto de cafe verde, glucoronolactona, taurina, B3, B5, B6 y B12, Dribosa e inositol. Extracto fruto del monje y estevia.            
+                            </p>
+                            <p class="precio">
+                                $13.350
+                            </p>
+                            <div class="contenedorBoton">
+                                <a href="x"> 
+                                <button class="botonSection2">
+                                    Agregar al carrito
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" #card>
+                        <div class="cardImg">
+                            <a href="X">
+                                <img src="Imagenes/flu-y.png" alt="Flu-y">
+                            </a>
+                        </div>
+                        <div class="cardTexto">
+                            <p class="descripcion">
+                                Suplemento de extracto de naranja dulce y magnesio. Mejora el funcionamiento del sistema nervioso. Disminuye trastornos psicológicos, ansiedad, depresión y sensibilidad.
+                            </p>
+                            <p class="precio">
+                                $103.950
+                            </p>
+                            <div class="contenedorBoton">
+                                <a href="x"> 
+                                <button class="botonSection2">
+                                    Agregar al carrito
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" #card>
+                        <div class="cardImg">
+                            <a href="X">
+                                <img src="Imagenes/egofrutas.png" alt="Ego frutas">
+                            </a>
+                        </div>
+                        <div class="cardTexto">
+                            <p class="descripcion">
+                                X 6 unidades. Suplemento sabor frutas del bosque, contiene extracto de regaliz, colina, glicina, B1, B3, B5, piridoxina B6, B12 y vitamina C, endulzado con Extracto de fruto del monje
+                            </p>
+                            <p class="precio">
+                                $99.200
+                            </p>
+                            <div class="contenedorBoton">
+                                <a href="x"> 
+                                <button class="botonSection2">
+                                    Agregar al carrito
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" #card>
+                        <div class="cardImg">
+                            <a href="X">
+                                <img src="Imagenes/power.png" alt="Power maker">
+                            </a>
+                        </div>
+                        <div class="cardTexto">
+                            <p class="descripcion">
+                                Suplemento alimenticio sabor naranja que contiene L-arginina, colina, glicina, acido pantoteico B5, Vitamina A, C, E y ademas minerales como: boro, calcio, cobre, cromo, zinc.
+                            </p>
+                            <p class="precio">
+                                $206.850
+                            </p>
+                            <div class="contenedorBoton">
+                                <a href="x"> 
+                                <button class="botonSection2">
+                                    Agregar al carrito
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" #card>
+                        <div class="cardImg">
+                            <a href="X">
+                                <img src="Imagenes/coffee.png" alt="Thermogen coffee">
+                            </a>
+                        </div>
+                        <div class="cardTexto">
+                            <p class="descripcion">
+                                Complemento nutritivo que contiene: Mezclas de cafés (coffea arabica y coffea canephora) Cromo, fibra de acacia, Con extracto de fruto del monje y estevia, endulzantes de origen natural.
+                            </p>
+                            <p class="precio">
+                                $97.100
+                            </p>
+                            <div class="contenedorBoton">
+                                <a href="x"> 
+                                <button class="botonSection2">
+                                    Agregar al carrito
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" #card>
+                        <div class="cardImg">
+                            <a href="X">
+                                <img src="Imagenes/agua.png" alt="Agua blu">
+                            </a>
+                        </div>
+                        <div class="cardTexto">
+                            <p class="descripcion">
+                                Agua mineral natural de manantial. El agua es un elemento vital para el organismo. Todas las células y órganos dependen de ella para su correcto funcionamiento.
+                            </p>
+                            <p class="precio">
+                                $7.850 - $3.950
+                            </p>
+                            <div class="contenedorBoton">
+                                <a href="x"> 
+                                <button class="botonSection2">
+                                    Agregar al carrito
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" #card>
+                        <div class="cardImg">
+                            <a href="X">
+                                <img src="Imagenes/kids.png" alt="V Kids">
+                            </a>
+                        </div>
+                        <div class="cardTexto">
+                            <p class="descripcion">
+                                Mezcla en polvo, sabor vainilla, contiene Proteína, Betaglucanos, DHA derivado de alga marina, Inulina (fibra prebiótica), Colina, etc...
+                            <p class="precio">
+                                $167.600
+                            </p>
+                            <div class="contenedorBoton">
+                                <a href="x"> 
+                                <button class="botonSection2">
+                                    Agregar al carrito
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+            
+            <button id="next" (click)="siguiente()">❯</button>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 3 -->
+
+    <section>
+        <h1>
+            Linea de maquillaje Seytú
+        </h1>
+
+        <div class="contenedorMakeup">
+
+            <div class="contenedorMakeup-wrapper">
+
+            <div class="contenedorMakeup-track" #trackMakeup>
+
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/brillo.png" alt="Brillo labial 13">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            BRILLO LABIAL
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/delineador.png" alt="Delineador 14">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            DELINEADOR PARA OJOS 
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/polvo.png" alt="Polvo traslucido 19">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            POLVO TRASLÚCIDO
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/mascarilla.png" alt="Mascarilla facial 28">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            MASCARILLA FACIAL
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/protector.png" alt="Protector Solar">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            PROTECTOR SOLAR FACIAL
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/shampoo.png" alt="Shampoo 38">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            SHAMPOO FORTIFICANTE
+                        </h2>
+                    </div>
+                </div> 
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/mascara.png" alt="Mascara de pestañas 15">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            MÁSCARA PARA PESTAÑAS
+                        </h2>
+                    </div>
+                </div> 
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/liquido.png" alt="Maquillaje liquido 20">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            MAQUILLAJE LÍQUIDO UP+ FPS 15
+                        </h2>
+                    </div>
+                </div>
+    
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/labial.png" alt="Labial 12">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            LABIAL HIDRATANTE FPS 15
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/lapiz.png" alt="Lápiz 16">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            LÁPIZ PARA CEJAS
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/brochas.png" alt="Brochas 17">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            SET DE BROCHAS
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/corrector.png" alt="Corrector 18">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            CORRECTOR LÍQUIDO
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/balsamo.png" alt="Balsamo 40">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            BÁLSAMO LABIAL
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/tinte.png" alt="Tinte 45">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            TINTE PERMANENTE SIN AMONÍACO
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="makeupCard" #makeupCard>
+                    <a href="X">
+                        <img src="Imagenes/locion.png" alt="Loción corporal 49">
+                    </a>
+                    <div class="overlay">
+                        <h2>
+                            LOCIÓN CORPORAL
+                        </h2>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="contenedorDots">
+            <span
+                class="dot"
+                [class.activo]="paginaActiva === 0"
+                (click)="irPagina(0)">
+            </span>
+            <span
+                class="dot"
+                [class.activo]="paginaActiva === 1"
+                (click)="irPagina(1)">
+            </span>     
+            <span
+                class="dot"
+                [class.activo]="paginaActiva === 2"
+                (click)="irPagina(2)">
+            </span>
+        </div>
+        
+    </div>
+    </section>
+
+
+    <!-- SECTION 4 -->
+
+    <section>
+        <div class="contenedorAfiliacion">
+
+        <div>
+            <img src="Imagenes/afiliacion 2.png" alt="Afiliarse">
+        </div>
+        <div>
+
+            <form class="formAfiliacion" 
+                action="X"
+                method="post">
+
+                <h1>
+                    Afiliación
+                </h1>
+                
+                <div class="filaForm">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" placeholder="Apellido" required>
+                </div>
+                <div class="filaForm">
+                    <input type="number" placeholder="Cedula" required>
+                    <input type="text" placeholder="Dirección" required>
+                </div>
+                <div class="filaForm">
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Teléfono" required>
+                </div>
+                <div>
+                    <input type="text" placeholder="Color favorito" required>
+                    <input type="date" required>
+                </div>
+                
+                <button class="btnAfiliar" type="submit">
+                    Quiero Afiliarme
+                </button>
+                
+            </form>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- SECTION 5 -->
+
+    <section>
+
+        <h1>Agenda tu capacitación</h1>
+
+        <div class="contenedorCapacitacion">
+
+            <form id="formCapacitacion"
+            action="X"
+            method="post">
+
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo" required>
+            <input type="date" required>
+            <input type="time" required>
+
+            <button class="btnCapacitacion"  type="submit">
+                Agendar capacitación
+            </button>
+        </form>
+
+        <div class="contenedorVideo">
+            <video
+                #video
+                id="video"
+                muted
+                autoplay
+                playsinline
+                preload="auto"
+                src="Imagenes/capacitacion2.mp4" 
+                type="video/mp4">
+            </video>
+        </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="contenedorFooter">
+
+        <div class="contenedorLogo">
+            <img src="Imagenes/logo footer.png" alt="Logo">
+            <p>Gente que cuida a la gente</p>
+        </div>
+
+        <div class="contenedorInfo">
+            <h3>
+                Información
+            </h3>
+
+            <a href="X">Acerca de</a>
+            <a href="X">Testimonios</a>
+            <a href="X">Eventos</a>
+        </div>
+
+        <div class="contenedorMenu">
+            <h3>
+                Menu
+            </h3>
+
+            <a href="X">Productos salud</a>
+            <a href="X">Maquillaje Seytú</a>
+            <a href="X">Afiliarme</a>
+            <a href="X">Capacitación</a>
+        </div>
+
+        <div class="lineaFooter">
+        </div>
+
+        </div>
+
+    </footer>
+
+    <a href="https://wa.me/573208464303?text=Hola,%20quiero%20más%20información%20sobre%20Omnilife"
+    class="btnWpp"
+    target="_blank">
+        <img src="Imagenes/wpp.png" alt="Whatsapp">
+    </a>
+    
+    
+
+
+    
+
+    
