@@ -37,6 +37,7 @@ header {
     font-size: 18px;
     font-family: "Nunito", sans-serif;
     transition: 0.3s;
+    cursor: pointer;
 }
 .nav-inicio a:hover {
     color: #360050;
@@ -590,4 +591,62 @@ h1 {
 
 .btnWpp:hover {
     transform: scale(1.1);
+}
+
+/* LOGIN */
+
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.modalContenido {
+    background: white;
+    width: 400px;
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.modalContenido h2 {
+    margin: 0;
+    text-align: center;
+    color: #8E24AA;
+    font-family: "Nunito", sans-serif;
+}
+.modalContenido button:first-of-type {
+    background: #8E24AA;
+    color: white;
+}
+.modalContenido button:last-of-type {
+    background: #E0E0E0;
+}
+.mss.error {
+    background: #ffe5e5;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+.mss.exito {
+    background: white;
+    color: #2e7d32;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+.mss {
+    margin: 0;
+    text-align: center;
+    color: #d73624;
+    font-family: "Nunito", sans-serif;
+    font-size: 13px;
 }

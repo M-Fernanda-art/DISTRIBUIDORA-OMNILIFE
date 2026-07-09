@@ -4,13 +4,19 @@ import {
   QueryList,
   ViewChild,
   ViewChildren,
-  AfterViewInit
+  AfterViewInit,
+  ChangeDetectorRef
 } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [],
+  imports: [
+  CommonModule,
+  FormsModule
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -40,6 +46,19 @@ export class App implements AfterViewInit {
   cardWidthMakeup = 0;
 
   paginaActiva = 0;
+
+  mostrarLogin = false;
+  correo = "";
+  password = "";
+
+  mensaje = "";
+  esError = false;
+
+
+  constructor(
+  private http: HttpClient,
+  private cdr: ChangeDetectorRef
+) {}
 
   ngAfterViewInit() {
 
@@ -95,5 +114,72 @@ irPagina(indice: number) {
     `translateX(-${indice * this.cardWidthMakeup * this.cardsPorVista}px)`;
 
 }
+
+abrirLogin() {
+  this.mostrarLogin = true;
+  this.mensaje = "";
+  this.correo = "";
+  this.password = "";
 }
+
+cerrarLogin() {
+
+  this.mostrarLogin = false;
+  this.mensaje = "";
+  this.correo = "";
+  this.password = "";
+}
+
+login() {
+
+  this.mensaje = "";
+
+  this.http.post(
+    'http://localhost:3000/api/usuarios/login',
+    {
+      correo: this.correo,
+      password: this.password
+    }
+  ).subscribe({
+
+    next: (respuesta: any) => {
+
+      this.esError = false;
+      this.mensaje = respuesta.mensaje;
+      this.correo = "";
+      this.password = "";
+      this.cdr.detectChanges();
+
+      setTimeout(() => {
+
+        this.cerrarLogin();
+
+      }, 1200);
+
+    },
+
+    error: (error) => {
+
+  console.log("Entró al error");
+  console.log(error);
+
+  this.esError = true;
+
+  if (error.error && error.error.mensaje) {
+    this.mensaje = error.error.mensaje;
+  } else {
+    this.mensaje = "Error desconocido.";
+  }
+
+  console.log("Mensaje:", this.mensaje);
+  this.cdr.detectChanges();
+
+}
+
+  });
+
+}
+
+}
+
 
