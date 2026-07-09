@@ -635,11 +635,64 @@
                 Cancelar
             </button>
 
+            <a (click)="abrirRegistro()">¿No tienes cuenta? Regístrate aquí</a>
+            
         </div>
 
     </div>
     
 
+    <!-- REGISTRO -->
+
+    <div class="modal" *ngIf="mostrarRegistro">
+        <div class="modalContenido">
+
+            <h2>Crear cuenta</h2>
+
+            <div class="mss"
+                *ngIf="mensajeRegistro"
+                [class.error]="esErrorRegistro"
+                [class.exito]="!esErrorRegistro">
+            
+                {{ mensajeRegistro }}
+
+            </div>
+
+            <input 
+                type="text" 
+                placeholder="Nombre"
+                [(ngModel)]="nombreRegistro">
+
+            <input 
+                type="email" 
+                placeholder="Correo"
+                [(ngModel)]="correoRegistro">
+
+            <input 
+                type="password" 
+                placeholder="Contraseña"
+                [(ngModel)]="passwordRegistro">
+
+            <input 
+                type="password" 
+                placeholder="Confirmar Contraseña"
+                [(ngModel)]="confirmarPasswordRegistro">
+
+            <button
+                type="button"
+                (click)="registrar()">
+                Registrarme
+            </button>
+
+            <button
+                type="button"
+                (click)="cerrarRegistro()">
+                Cancelar
+            </button>
+
+
+        </div>
+    </div>
 
     
 

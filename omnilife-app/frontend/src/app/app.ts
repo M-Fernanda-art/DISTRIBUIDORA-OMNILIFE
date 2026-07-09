@@ -46,13 +46,19 @@ export class App implements AfterViewInit {
   cardWidthMakeup = 0;
 
   paginaActiva = 0;
-
   mostrarLogin = false;
   correo = "";
   password = "";
-
   mensaje = "";
   esError = false;
+
+  mostrarRegistro = false;
+  nombreRegistro = "";
+  correoRegistro = "";
+  passwordRegistro = "";
+  confirmarPasswordRegistro = "";
+  mensajeRegistro = "";
+  esErrorRegistro = false;
 
 
   constructor(
@@ -122,6 +128,16 @@ abrirLogin() {
   this.password = "";
 }
 
+abrirRegistro() {
+  this.mostrarLogin = false;
+  this.mostrarRegistro = true;
+  this.mensajeRegistro = "";
+  this.nombreRegistro = "";
+  this.correoRegistro = "";
+  this.passwordRegistro = "";
+  this.confirmarPasswordRegistro = "";
+}
+
 cerrarLogin() {
 
   this.mostrarLogin = false;
@@ -129,6 +145,17 @@ cerrarLogin() {
   this.correo = "";
   this.password = "";
 }
+
+
+cerrarRegistro() {
+  this.mostrarRegistro = false;
+  this.mensajeRegistro = "";
+  this.nombreRegistro = "";
+  this.correoRegistro = "";
+  this.passwordRegistro = "";
+  this.confirmarPasswordRegistro = "";
+}
+
 
 login() {
 
@@ -176,6 +203,55 @@ login() {
 
 }
 
+  });
+
+}
+
+registrar() {
+
+  this.mensajeRegistro = "";
+
+  if (!this.nombreRegistro || !this.correoRegistro || !this.passwordRegistro || !this.confirmarPasswordRegistro) {
+    this.esErrorRegistro = true;
+    this.mensajeRegistro = "Completa todos los campos.";
+    return;
+  }
+
+  if (this.passwordRegistro !== this.confirmarPasswordRegistro) {
+    this.esErrorRegistro = true;
+    this.mensajeRegistro = "Las constraseñas no coinciden.";
+    return;
+  }
+
+  this.http.post(
+    'http://localhost:3000/api/usuarios/registro',
+    {
+      nombre: this.nombreRegistro,
+      correo: this.correoRegistro,
+      password: this.passwordRegistro
+    }
+  ).subscribe({
+
+    next: (respuesta: any) => {
+      this.esErrorRegistro = false;
+      this.mensajeRegistro = respuesta.mensaje;
+      this.cdr.detectChanges();
+
+      setTimeout(() => {
+        this.cerrarRegistro();
+      }, 1200);
+    },
+
+    error: (error) => {
+      this.esErrorRegistro = true;
+
+      if (error.error && error.error.mensaje) {
+        this.mensajeRegistro = error.error.mensaje;
+      } else {
+        this.mensajeRegistro = "Error desconocido.";
+      }
+      this.cdr.detectChanges();
+    }
   });
 
 }

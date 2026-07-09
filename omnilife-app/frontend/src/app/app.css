@@ -650,3 +650,10 @@ h1 {
     font-family: "Nunito", sans-serif;
     font-size: 13px;
 }
+.modalContenido a {
+    margin: 0;
+    text-align: center;
+    color: #8E24AA;
+    font-family: "Nunito", sans-serif;
+    cursor: pointer;
+}
