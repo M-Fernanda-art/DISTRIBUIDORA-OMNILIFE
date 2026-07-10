@@ -1,0 +1,59 @@
+<div class="adminContainer" *ngIf="authService.esAdmin(); else sinPermiso">
+
+    <div class="adminHeader">
+        <h2>Panel de productos</h2>
+        <button type="button" (click)="abrirCrear()">+ Nuevo producto</button>
+    </div>
+
+    <table class="tablaProductos">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of productos">
+                <td><img [src]="producto.imagen" [alt]="producto.nombre" class="miniatura"></td>
+                <td>{{ producto.nombre }}</td>
+                <td>${{ producto.precio }}</td>
+                <td>{{ producto.descripcion }}</td>
+                <td>
+                    <button type="button" (click)="abrirEditar(producto)">Editar</button>
+                    <button type="button" (click)="eliminar(producto._id!)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="modal" *ngIf="mostrarModal">
+        <div class="modalContenido">
+
+            <h2>{{ modoEdicion ? 'Editar producto' : 'Nuevo producto' }}</h2>
+
+            <div class="mss"
+                *ngIf="mensaje"
+                [class.error]="esError"
+                [class.exito]="!esError">
+                {{ mensaje }}
+            </div>
+
+            <input type="text" placeholder="Nombre" [(ngModel)]="nombre">
+            <input type="number" placeholder="Precio" [(ngModel)]="precio">
+            <input type="text" placeholder="Descripción" [(ngModel)]="descripcion">
+            <input type="text" placeholder="URL de la imagen" [(ngModel)]="imagen">
+
+            <button type="button" (click)="guardar()">Guardar</button>
+            <button type="button" (click)="cerrarModal()">Cancelar</button>
+
+        </div>
+    </div>
+
+</div>
+
+<ng-template #sinPermiso>
+    <p>No tienes permisos para ver esta página.</p>
+</ng-template>

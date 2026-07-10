@@ -20,8 +20,14 @@
             <a href="javascript:void(0)">
                 Agendar capacitación
             </a>
-            <a (click)="abrirLogin()">
+            <a (click)="abrirLogin()" *ngIf="!authService.estaLogueado()">
                 Iniciar sesión
+            </a>
+            <a *ngIf="authService.estaLogueado()">
+                {{ authService.getUsuario()?.nombre }}
+            </a>
+            <a (click)="cerrarSesion()" *ngIf="authService.estaLogueado()">
+                Cerrar sesión
             </a>
             <a>
                 <i class="fa-solid fa-cart-shopping" style="color: rgb(54, 0, 80);"></i>
@@ -692,7 +698,11 @@
 
 
         </div>
+
     </div>
+
+    <router-outlet></router-outlet>
+    
 
     
 

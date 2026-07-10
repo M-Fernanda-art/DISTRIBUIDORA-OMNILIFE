@@ -10,12 +10,15 @@ import {
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from './services/auth.service';
+import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
   CommonModule,
-  FormsModule
+  FormsModule,
+  RouterOutlet
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
@@ -63,7 +66,8 @@ export class App implements AfterViewInit {
 
   constructor(
   private http: HttpClient,
-  private cdr: ChangeDetectorRef
+  private cdr: ChangeDetectorRef,
+  public authService: AuthService
 ) {}
 
   ngAfterViewInit() {
@@ -146,6 +150,10 @@ cerrarLogin() {
   this.password = "";
 }
 
+cerrarSesion() {
+  this.authService.logout();
+}
+
 
 cerrarRegistro() {
   this.mostrarRegistro = false;
@@ -161,47 +169,35 @@ login() {
 
   this.mensaje = "";
 
-  this.http.post(
-    'http://localhost:3000/api/usuarios/login',
-    {
-      correo: this.correo,
-      password: this.password
-    }
-  ).subscribe({
+  this.authService.login(this.correo, this.password).subscribe({
 
     next: (respuesta: any) => {
 
       this.esError = false;
       this.mensaje = respuesta.mensaje;
+
       this.correo = "";
       this.password = "";
       this.cdr.detectChanges();
 
       setTimeout(() => {
-
         this.cerrarLogin();
-
       }, 1200);
 
     },
 
     error: (error) => {
 
-  console.log("Entró al error");
-  console.log(error);
+      this.esError = true;
 
-  this.esError = true;
+      if (error.error && error.error.mensaje) {
+        this.mensaje = error.error.mensaje;
+      } else {
+        this.mensaje = "Error desconocido.";
+      }
 
-  if (error.error && error.error.mensaje) {
-    this.mensaje = error.error.mensaje;
-  } else {
-    this.mensaje = "Error desconocido.";
-  }
-
-  console.log("Mensaje:", this.mensaje);
-  this.cdr.detectChanges();
-
-}
+      this.cdr.detectChanges();
+    }
 
   });
 
