@@ -11,7 +11,10 @@ const app = express();
 connectDB();
 
 app.use(cors({
-    origin: 'http://localhost:4200'
+    origin: [
+    'http://localhost:4200',
+    'http://3.19.209.49'
+]
 }));
 app.use(express.json());
 app.use('/api/usuarios', userRoutes);
