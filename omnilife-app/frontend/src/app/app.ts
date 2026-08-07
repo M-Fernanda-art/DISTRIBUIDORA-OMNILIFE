@@ -26,7 +26,7 @@ import { RouterOutlet } from '@angular/router';
 export class App implements AfterViewInit {
 
   private apiUrl = '/api/usuarios';
-  
+
   @ViewChild('trackCards')
   trackCards!: ElementRef;
 
@@ -222,7 +222,7 @@ registrar() {
   }
 
   this.http.post(
-    this.apiUrl,
+    `${this.apiUrl}/registro`,
     {
       nombre: this.nombreRegistro,
       correo: this.correoRegistro,
