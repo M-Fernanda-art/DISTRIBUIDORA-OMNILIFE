@@ -15,7 +15,7 @@ export interface Producto {
 })
 export class ProductService {
 
-    private urlBase = 'http://localhost:3000/api/productos';
+    private urlBase = '/api/productos';
 
     constructor(private http: HttpClient) {}
 

@@ -17,7 +17,7 @@ interface RespuestaLogin {
 })
 export class AuthService {
 
-  private urlBase = 'http://localhost:3000/api/usuarios';
+  private urlBase = '/api/usuarios';
 
   constructor(private http: HttpClient) {}
 
